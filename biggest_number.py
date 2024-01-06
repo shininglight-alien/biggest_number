@@ -13,3 +13,7 @@ root.title("What's the Biggest Number?")
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 root.geometry(f"{screen_width}x{screen_height}")
+
+# create a frame to hold the widgets
+frame = tk.Frame(root)
+frame.pack()
