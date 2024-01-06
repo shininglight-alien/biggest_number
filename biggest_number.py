@@ -8,3 +8,8 @@ from tkinter import PhotoImage
 # setup
 root = tk.Tk()
 root.title("What's the Biggest Number?")
+
+# set window size to full screen
+screen_width = root.winfo_screenwidth()
+screen_height = root.winfo_screenheight()
+root.geometry(f"{screen_width}x{screen_height}")
