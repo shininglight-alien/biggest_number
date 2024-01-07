@@ -22,3 +22,8 @@ frame.pack()
 label1 = tk.Label(frame, text="First Number: ")
 label2 = tk.Label(frame, text="Second Number: ")
 label3 = tk.Label(frame, text="Third Number: ")
+
+# create three entry widgets for the numbers
+entry1 = tk.Entry(frame)
+entry2 = tk.Entry(frame)
+entry3 = tk.Entry(frame)
