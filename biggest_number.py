@@ -14,6 +14,11 @@ screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 root.geometry(f"{screen_width}x{screen_height}")
 
+# background image
+background_image = PhotoImage(file=r"C:\Users\Ellaine\Downloads\The Quest for Biggest Number.png")
+background_label = tk.Label(root, image=background_image)
+background_label.place(relwidth=1, relheight=1)
+
 # create a frame to hold the widgets
 frame = tk.Frame(root)
 frame.pack()
