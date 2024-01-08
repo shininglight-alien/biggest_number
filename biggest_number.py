@@ -21,7 +21,7 @@ background_label.place(relwidth=1, relheight=1)
 
 # create a frame to hold the widgets
 frame = tk.Frame(root)
-frame.place(relx=0.5, rely=0.55, anchor="center")
+frame.place(relx=0.5, rely=0.58, anchor="center")
 
 # create three subframes for each number
 frame1 = tk.Frame(frame, borderwidth=10, relief="groove", bg="light blue")
@@ -57,7 +57,7 @@ def find_biggest():
         biggest = num3
 
     # display the result
-    result.config(text="Biggest Number: " + str(biggest))
+    result.config(text="GIGANTOSAURUS NUMERALUS: " + str(biggest))
 
 # create a button to trigger the function
 button = tk.Button(frame, text="Find Now!", command=find_biggest, width=20, height=1, font=("Comic Sans MS Bold", 15), bg="light blue")
@@ -68,7 +68,7 @@ frame2.grid(row=0, column=1, padx=50, pady=20)
 frame3.grid(row=0, column=2, padx=50, pady=20)
 
 # create a label for the result
-result = tk.Label(frame, text="Biggest Number: ", font=("Comic Sans MS Bold", 15), padx=50, pady=30, fg="dark blue")
+result = tk.Label(frame, text="GIGANTOSAURUS NUMERALUS: ", font=("Comic Sans MS Bold", 15), padx=50, pady=30, fg="dark blue")
 
 label1.pack(side="top")
 entry1.pack(anchor="center")
