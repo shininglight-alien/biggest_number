@@ -21,12 +21,12 @@ background_label.place(relwidth=1, relheight=1)
 
 # create a frame to hold the widgets
 frame = tk.Frame(root)
-frame.pack()
+frame.place(relx=0.5, rely=0.5, anchor="center")
 
 # create three subframes for each number
-frame1 = tk.Frame(frame, borderwidth=2, relief="groove")
-frame2 = tk.Frame(frame, borderwidth=2, relief="groove")
-frame3 = tk.Frame(frame, borderwidth=2, relief="groove")
+frame1 = tk.Frame(frame, borderwidth=5, relief="groove")
+frame2 = tk.Frame(frame, borderwidth=5, relief="groove")
+frame3 = tk.Frame(frame, borderwidth=5, relief="groove")
 
 # create three labels for the numbers
 label1 = tk.Label(frame1, text="First Number: ")
@@ -71,13 +71,13 @@ frame3.grid(row=0, column=2, padx=10, pady=10)
 result = tk.Label(frame, text="Biggest Number: ")
 
 label1.pack(side="top")
-entry1.pack(side="top", anchor="center")
+entry1.pack(anchor="center")
 
 label2.pack(side="top")
-entry2.pack(side="top", anchor="center")
+entry2.pack(anchor="center")
 
 label3.pack(side="top")
-entry3.pack(side="top", anchor="center")
+entry3.pack(anchor="center")
 
 button.grid(row=1, column=0, columnspan=3)
 result.grid(row=2, column=0, columnspan=3)
