@@ -9,6 +9,11 @@ from tkinter import PhotoImage
 root = tk.Tk()
 root.title("What's the Biggest Number?")
 
+# fonts
+label_font = ("Comic Sans Ms", 20, "bold")
+button_font = ("Comic Sans Ms", 20, "bold")
+result_font = ("Comic Sans Ms", 24, "bold")
+
 # set window size to full screen
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -24,14 +29,14 @@ frame = tk.Frame(root)
 frame.place(relx=0.5, rely=0.5, anchor="center")
 
 # create three subframes for each number
-frame1 = tk.Frame(frame, borderwidth=5, relief="groove")
-frame2 = tk.Frame(frame, borderwidth=5, relief="groove")
-frame3 = tk.Frame(frame, borderwidth=5, relief="groove")
+frame1 = tk.Frame(frame, borderwidth=10, relief="groove")
+frame2 = tk.Frame(frame, borderwidth=10, relief="groove")
+frame3 = tk.Frame(frame, borderwidth=10, relief="groove")
 
 # create three labels for the numbers
-label1 = tk.Label(frame1, text="First Number: ")
-label2 = tk.Label(frame2, text="Second Number: ")
-label3 = tk.Label(frame3, text="Third Number: ")
+label1 = tk.Label(frame1, text="First Number: ", width=10, height=5)
+label2 = tk.Label(frame2, text="Second Number: ", width=10, height=5)
+label3 = tk.Label(frame3, text="Third Number: ", width=10, height=5)
 
 # create three entry widgets for the numbers
 entry1 = tk.Entry(frame1)
@@ -63,9 +68,9 @@ def find_biggest():
 button = tk.Button(frame, text="Find Now!", command=find_biggest)
 
 # arrange the widgets using grid layout
-frame1.grid(row=0, column=0, padx=10, pady=10)
-frame2.grid(row=0, column=1, padx=10, pady=10)
-frame3.grid(row=0, column=2, padx=10, pady=10)
+frame1.grid(row=0, column=0, padx=75, pady=30)
+frame2.grid(row=0, column=1, padx=75, pady=30)
+frame3.grid(row=0, column=2, padx=75, pady=30)
 
 # create a label for the result
 result = tk.Label(frame, text="Biggest Number: ")
