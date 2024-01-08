@@ -34,9 +34,9 @@ frame2 = tk.Frame(frame, borderwidth=10, relief="groove")
 frame3 = tk.Frame(frame, borderwidth=10, relief="groove")
 
 # create three labels for the numbers
-label1 = tk.Label(frame1, text="First Number: ", width=10, height=5)
-label2 = tk.Label(frame2, text="Second Number: ", width=10, height=5)
-label3 = tk.Label(frame3, text="Third Number: ", width=10, height=5)
+label1 = tk.Label(frame1, text="First Number: ", width=30, height=5)
+label2 = tk.Label(frame2, text="Second Number: ", width=30, height=5)
+label3 = tk.Label(frame3, text="Third Number: ", width=30, height=5)
 
 # create three entry widgets for the numbers
 entry1 = tk.Entry(frame1)
