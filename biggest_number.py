@@ -9,11 +9,6 @@ from tkinter import PhotoImage
 root = tk.Tk()
 root.title("What's the Biggest Number?")
 
-# fonts
-label_font = ("Comic Sans Ms", 20, "bold")
-button_font = ("Comic Sans Ms", 20, "bold")
-result_font = ("Comic Sans Ms", 24, "bold")
-
 # set window size to full screen
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
@@ -26,22 +21,22 @@ background_label.place(relwidth=1, relheight=1)
 
 # create a frame to hold the widgets
 frame = tk.Frame(root)
-frame.place(relx=0.5, rely=0.5, anchor="center")
+frame.place(relx=0.5, rely=0.55, anchor="center")
 
 # create three subframes for each number
-frame1 = tk.Frame(frame, borderwidth=10, relief="groove")
-frame2 = tk.Frame(frame, borderwidth=10, relief="groove")
-frame3 = tk.Frame(frame, borderwidth=10, relief="groove")
+frame1 = tk.Frame(frame, borderwidth=10, relief="groove", bg="light blue")
+frame2 = tk.Frame(frame, borderwidth=10, relief="groove", bg="light blue")
+frame3 = tk.Frame(frame, borderwidth=10, relief="groove", bg="light blue")
 
 # create three labels for the numbers
-label1 = tk.Label(frame1, text="First Number: ", width=30, height=5)
-label2 = tk.Label(frame2, text="Second Number: ", width=30, height=5)
-label3 = tk.Label(frame3, text="Third Number: ", width=30, height=5)
+label1 = tk.Label(frame1, text="First Number: ", width=20, height=3, font=("Comic Sans MS Bold", 15), fg="dark blue")
+label2 = tk.Label(frame2, text="Second Number: ", width=20, height=3, font=("Comic Sans MS Bold", 15), fg="dark blue")
+label3 = tk.Label(frame3, text="Third Number: ", width=20, height=3, font=("Comic Sans MS Bold", 15), fg="dark blue")
 
 # create three entry widgets for the numbers
-entry1 = tk.Entry(frame1)
-entry2 = tk.Entry(frame2)
-entry3 = tk.Entry(frame3)
+entry1 = tk.Entry(frame1, font=("Comic Sans MS Bold", 15), fg="blue", justify="center")
+entry2 = tk.Entry(frame2, font=("Comic Sans MS Bold", 15), fg="blue", justify="center")
+entry3 = tk.Entry(frame3, font=("Comic Sans MS Bold", 15), fg="blue", justify="center")
 
 # create a label for the result
 result = tk.Label(frame, text="Biggest Number: ")
@@ -65,15 +60,15 @@ def find_biggest():
     result.config(text="Biggest Number: " + str(biggest))
 
 # create a button to trigger the function
-button = tk.Button(frame, text="Find Now!", command=find_biggest)
+button = tk.Button(frame, text="Find Now!", command=find_biggest, width=20, height=1, font=("Comic Sans MS Bold", 15), bg="light blue")
 
 # arrange the widgets using grid layout
-frame1.grid(row=0, column=0, padx=75, pady=30)
-frame2.grid(row=0, column=1, padx=75, pady=30)
-frame3.grid(row=0, column=2, padx=75, pady=30)
+frame1.grid(row=0, column=0, padx=50, pady=20)
+frame2.grid(row=0, column=1, padx=50, pady=20)
+frame3.grid(row=0, column=2, padx=50, pady=20)
 
 # create a label for the result
-result = tk.Label(frame, text="Biggest Number: ")
+result = tk.Label(frame, text="Biggest Number: ", font=("Comic Sans MS Bold", 15), padx=50, pady=30, fg="dark blue")
 
 label1.pack(side="top")
 entry1.pack(anchor="center")
